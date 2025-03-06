@@ -13,15 +13,15 @@
                 <p>Profil</p>
             </a>
         </li>
+
         <li class="nav-item">
-            <a href="{{ route('admin.role.index') }}"
-                class="nav-link {{ Route::is('admin.role.index') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-file-contract"></i>
-                <p>Skripsi STMIK
-                    <span class="badge badge-success right">{{ $RoleCount }}</span>
-                </p>
+            <a href="{{ route('admin.skripsi.index') }}"
+                class="nav-link {{ Route::is('admin.skripsi.index') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-book"></i>
+                <p>Skripsi <span class="badge badge-info right">{{ $SkripsiCount }}</span></p>
             </a>
         </li>
+
         @role('admin')
             <li class="nav-item">
                 <a href="{{ route('admin.mahasiswa.index') }}"

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginWithOTPController;
+use App\Http\Controllers\SkripsiController;
 use App\Http\Controllers\SocialiteController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -19,13 +20,13 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-// Login with OTP Routes
-Route::prefix('/otp')->middleware('guest')->name('otp.')->controller(LoginWithOTPController::class)->group(function () {
-    Route::get('/login', 'login')->name('login');
-    Route::post('/generate', 'generate')->name('generate');
-    Route::get('/verification/{userId}', 'verification')->name('verification');
-    Route::post('login/verification', 'loginWithOtp')->name('loginWithOtp');
-});
+// // Login with OTP Routes
+// Route::prefix('/otp')->middleware('guest')->name('otp.')->controller(LoginWithOTPController::class)->group(function () {
+//     Route::get('/login', 'login')->name('login');
+//     Route::post('/generate', 'generate')->name('generate');
+//     Route::get('/verification/{userId}', 'verification')->name('verification');
+//     Route::post('login/verification', 'loginWithOtp')->name('loginWithOtp');
+// });
 
 
 // Auth routes

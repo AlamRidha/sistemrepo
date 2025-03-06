@@ -91,7 +91,7 @@ class UserController extends Controller
             $user->password = bcrypt($request->password);
         }
         $user->save();
-        $user->assignRole($request->role);
+        $user->syncRoles([$request->role]);
         return redirect()->route('admin.user.index')->with('success', 'User updated successfully.');
     }
 

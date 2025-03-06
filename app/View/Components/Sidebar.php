@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Collection;
 use App\Models\Mahasiswa;
 use App\Models\Product;
+use App\Models\Skripsi;
 use App\Models\SubCategory;
 use App\Models\User;
 use Closure;
@@ -32,6 +33,9 @@ class Sidebar extends Component
 
         $MahasiswaCount = Mahasiswa::count();
         view()->share('MahasiswaCount', $MahasiswaCount);
+
+        $SkripsiCount = Skripsi::count();
+        view()->share('SkripsiCount', $SkripsiCount);
 
         // $CategoryCount = Category::count();
         // view()->share('CategoryCount',$CategoryCount);
