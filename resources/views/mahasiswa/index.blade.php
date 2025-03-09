@@ -2,7 +2,6 @@
     @section('title', 'Daftar Mahasiswa')
 
     <div class="container">
-        <h2>Daftar Mahasiswa</h2>
         <div class="mb-3">
             <a href="{{ route('admin.mahasiswa.create') }}" class="btn btn-primary">Tambah Mahasiswa</a>
         </div>

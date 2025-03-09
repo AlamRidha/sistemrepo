@@ -22,7 +22,7 @@
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('email')" class="mt-2 text-danger" />
                     </div>
                     <div class="mb-3 input-group">
                         <input id="password" class="form-control" type="password" name="password" required
@@ -32,7 +32,7 @@
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('password')" class="mt-2 text-danger" />
                     </div>
                     <div class="row">
                         <!-- /.col -->

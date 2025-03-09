@@ -1,9 +1,8 @@
 <x-admin>
-    @section('title', 'Profile Campus')
+    @section('title', 'Profile Perpustakaan YPP Prabumulih')
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Profil Perpustakaan YPP Prabumulih</h2>
                 @role('admin')
                     <a href="{{ route('admin.profilcampus.edit', $profilecampus->id) }}" class="mb-3 btn btn-primary">Ubah</a>
                 @endrole

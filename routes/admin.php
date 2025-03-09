@@ -21,18 +21,13 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Route::middleware(['role_or_permission:admin|mahasiswa'])->group(function () {
+    // skripsi
     Route::resource('skripsi', SkripsiController::class);
-    // });
-
+    // profil campus
     Route::resource('profilcampus', ProfileCampusController::class);
 
 
     Route::middleware(['role:admin'])->group(function () {
-        // skripsi;
-        // Route::resource('skripsi', SkripsiController::class);
-        // profile campus
-        // Route::resource('profilcampus', ProfileCampusController::class);
         // mahasiswa
         Route::resource('mahasiswa', MahasiswaController::class);
         // datalogin

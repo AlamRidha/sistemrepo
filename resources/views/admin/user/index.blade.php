@@ -1,8 +1,7 @@
 <x-admin>
-    @section('title', 'Users')
+    @section('title', 'Daftar Pengguna')
 
     <div class="container">
-        <h2>Daftar Pengguna</h2>
         <div class="mb-3">
             <a href="{{ route('admin.user.create') }}" class="btn btn-primary" aria-label="Tambah Pengguna">Tambah
                 Pengguna</a>
