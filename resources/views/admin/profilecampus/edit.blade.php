@@ -10,8 +10,13 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <label for="visi_misi">Visi & Misi</label>
-                        <textarea name="visi_misi" class="form-control" required>{{ old('visi_misi', $profilecampus->visi_misi ?? '') }}</textarea>
+                        <label for="visi">Visi</label>
+                        <textarea name="visi" class="form-control" required>{{ old('visi', $profilecampus->visi ?? '') }}</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="misi">Misi</label>
+                        <textarea name="misi" class="form-control" required>{{ old('misi', $profilecampus->misi ?? '') }}</textarea>
                     </div>
 
                     <div class="form-group">

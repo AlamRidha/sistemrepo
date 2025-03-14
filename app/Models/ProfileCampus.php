@@ -12,7 +12,8 @@ class ProfileCampus extends Model
     protected $table = 'profilecampus';
 
     protected $fillable = [
-        'visi_misi',
+        'visi',
+        'misi',
         'sejarah',
         'kontak'
     ];

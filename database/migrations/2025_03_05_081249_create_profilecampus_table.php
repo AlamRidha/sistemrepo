@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('profilecampus', function (Blueprint $table) {
             $table->id();
-            $table->string('visi_misi', 255);
-            $table->string('sejarah', 255);
+            $table->text('visi');
+            $table->text('misi');
+            $table->text('sejarah');
             $table->string('kontak', 255);
             $table->timestamps();
         });

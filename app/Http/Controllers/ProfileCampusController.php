@@ -23,13 +23,15 @@ class ProfileCampusController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'visi_misi' => 'required|string',
+            'visi' => 'required|string',
+            'misi' => 'required|string',
             'sejarah' => 'required|string',
             'kontak' => 'required|string'
         ]);
 
         $profile = ProfileCampus::findOrFail($id);
-        $profile->visi_misi = $request->visi_misi;
+        $profile->visi = $request->visi;
+        $profile->misi = $request->misi;
         $profile->sejarah = $request->sejarah;
         $profile->kontak = $request->kontak;
         $profile->save();

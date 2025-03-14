@@ -12,16 +12,19 @@ class SkripsiController extends Controller
     //
     public function index(Request $request)
     {
+        $roleAdmin = auth()->user()->hasRole('admin');
 
         if ($request->ajax()) {
             $data = Skripsi::select(['id_skripsi', 'Judul', 'Penulis', 'Prodi', 'tahun_terbit', 'Abstrak', 'File']);
-            return DataTables::of($data)
+            $dataTable = DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('File', function ($row) {
                     return '<a href="' . Storage::url($row->File)  . '" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-file-alt"></i> Open File</a>';
-                    // return '<a href="' . Storage::url($row->File) . '" target="_blank">Lihat File</a>';
-                })
-                ->addColumn('action', function ($row) {
+                });
+
+            // IMPORTANT: Change the condition here - only add action column if user IS admin
+            if ($roleAdmin) {
+                $dataTable->addColumn('action', function ($row) {
                     $editUrl = route('admin.skripsi.edit', $row->id_skripsi);
                     $deleteUrl = route('admin.skripsi.destroy', $row->id_skripsi);
                     $csrf = csrf_field();
@@ -33,12 +36,19 @@ class SkripsiController extends Controller
                                 ' . $method . '
                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm(\'Apakah Anda yakin?\')">Hapus</button>
                             </form>';
-                })
-                ->rawColumns(['File', 'action'])
-                ->make(true);
+                });
+
+                // IMPORTANT: Include both File and action in rawColumns
+                $dataTable->rawColumns(['File', 'action']);
+            } else {
+                // If not admin, only include File in rawColumns
+                $dataTable->rawColumns(['File']);
+            }
+
+            return $dataTable->make(true);
         }
 
-        return view('skripsi.index');
+        return view('skripsi.index', compact('roleAdmin'));
     }
 
     public function create()

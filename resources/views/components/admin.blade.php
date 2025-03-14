@@ -57,12 +57,12 @@
                 <!-- Sidebar user (optional) -->
                 <div class="pb-3 mt-3 mb-3 user-panel d-flex">
                     <div class="image">
-                        @if (Auth::user()->avatar != null)
+                        {{-- @if (Auth::user()->avatar != null)
                             <img src="{{ Auth::user()->avatar }}" class="img-circle elevation-2" alt="User Image">
-                        @else
-                            <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
-                                alt="User Image">
-                        @endif
+                        @else --}}
+                        <img src="{{ asset('admin/dist/img/avatar4.png') }}" class="img-circle elevation-2"
+                            alt="User Image">
+                        {{-- @endif --}}
                     </div>
                     <div class="info">
                         <a href="{{ route('admin.dashboard') }}" class="d-block">{{ config('app.name') }}</a>
