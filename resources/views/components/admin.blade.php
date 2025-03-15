@@ -1,12 +1,3 @@
-<!--
-/*!
- *   AdminLTE With Laravel
- *   Author: Nihir Zala
- *   Website: https://nihirz.netlify.app
- *   License: Open source - MIT <https://opensource.org/licenses/MIT>
- */
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,17 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- <title> @yield('title', 'Admin') | {{ config('app.name') }}</title> --}}
-    <title> @yield('title', 'Admin') | {{ 'Sistem Informasi' }}</title>
+    <title> @yield('title', 'Admin') | {{ 'E-Skripsi ITBM' }}</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     {{-- Favicons --}}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('admin/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('admin/favicon/library.png') }}">
+    {{-- <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin/favicon/library.png') }}"> --}}
+    {{-- <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('admin/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('admin/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin/favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('admin/favicon/site.webmanifest') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin/favicon/favicon-16x16.png') }}"> --}}
+    {{-- <link rel="manifest" href="{{ asset('admin/favicon/site.webmanifest') }}"> --}}
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="{{ asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet"
@@ -65,7 +58,7 @@
                         {{-- @endif --}}
                     </div>
                     <div class="info">
-                        <a href="{{ route('admin.dashboard') }}" class="d-block">{{ config('app.name') }}</a>
+                        <a href="{{ route('admin.dashboard') }}" class="d-block">E-Skripsi ITBM</a>
                     </div>
                 </div>
                 <!-- Sidebar Menu -->

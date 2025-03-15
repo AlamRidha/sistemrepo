@@ -6,7 +6,7 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="text-center card-header">
-                <a href="/" class="h1"><b>Sistem Informasi Repository</a>
+                <a href="/" class="h1"><b>Sistem Informasi E-Skripsi ITBM</a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Selamat Datang</p>
@@ -42,9 +42,9 @@
                         <!-- /.col -->
                     </div>
                 </form>
-                <p class="mt-3 mb-0 text-center">
+                {{-- <p class="mt-3 mb-0 text-center">
                     <a href="{{ route('register') }}" class="text-center">Register a new Account</a>
-                </p>
+                </p> --}}
             </div>
             <!-- /.card-body -->
         </div>

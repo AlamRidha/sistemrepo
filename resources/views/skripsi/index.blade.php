@@ -1,5 +1,5 @@
 <x-admin>
-    @section('title', 'Daftar Skripsi')
+    @section('title', 'Daftar Skripsi Mahasiswa')
 
     <div class="container">
 

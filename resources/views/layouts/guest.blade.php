@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> @yield('title') | {{ config('app.name') }}</title>
+    <title> @yield('title') | {{ 'E-Skripsi ITBM' }}</title>
+
+    <!-- Fav icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('admin/favicon/library.png') }}">
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"

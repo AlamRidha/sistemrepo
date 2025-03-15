@@ -37,7 +37,9 @@
                         <h3>Misi</h3>
                         <hr>
                         <p class="text-justify">
-                            {{ $profilecampus->misi ?? 'Belum ada data.' }}
+                            {{-- {!! nl2br(preg_replace('/(\d+)\./', "<br><b>$1.</b>", e($profilecampus->misi ?? 'Belum ada data.'))) !!} --}}
+                            {{-- {!! preg_replace('/\d+\.\s*/', '<br><b>$0</b>', nl2br(e($profilecampus->misi ?? 'Belum ada data.'))) !!} --}}
+                            {!! preg_replace('/(\d+\.\s)/', '<br><strong>$1</strong> ', $profilecampus->misi) !!}
                         </p>
                     </div>
                 </div>
