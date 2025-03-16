@@ -53,7 +53,9 @@
                         {{-- @if (Auth::user()->avatar != null)
                             <img src="{{ Auth::user()->avatar }}" class="img-circle elevation-2" alt="User Image">
                         @else --}}
-                        <img src="{{ asset('admin/dist/img/avatar4.png') }}" class="img-circle elevation-2"
+                        {{-- <img src="{{ asset('admin/dist/img/avatar4.png') }}" class="img-circle elevation-2"
+                            alt="User Image"> --}}
+                        <img src="{{ asset('admin/favicon/social-media.gif') }}" class="img-circle elevation-2"
                             alt="User Image">
                         {{-- @endif --}}
                     </div>
@@ -106,6 +108,8 @@
     </footer>
     <!-- ./wrapper -->
 
+    <!-- Lottie Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
     <!-- jQuery -->
     <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
     <!-- jQuery UI 1.11.4 -->

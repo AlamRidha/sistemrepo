@@ -42,7 +42,7 @@ php artisan serve
 
 -   Admin
 
-email: `tes@gmail.com`
+email: `andi@gmail.com`
 password: `12345678`
 
 -   User
