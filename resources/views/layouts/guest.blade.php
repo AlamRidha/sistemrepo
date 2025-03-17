@@ -22,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-color: rgb(144,161,185)">
     {{ $slot }}
     <!-- /.login-box -->
 

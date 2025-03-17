@@ -6,22 +6,24 @@
         <div class="gap-3 row w-100 justify-content-center align-items-center">
             <!-- Login Box -->
             <div class="col-lg-5 col-md-6 col-12 d-flex align-items-center">
-                <div class="login-box custom-login-box w-100">
-                    <div class="card card-outline card-warning">
-                        <div class="text-center bg-white card-header border-bottom">
+                <div class="login-box w-100">
+                    <div class="card card-outline card-primary">
+                        <div class="text-center card-header border-bottom" style="background-color: rgb(226,232,240)">
                             <p class="h1 font-weight-bold text-dark">
                                 Sistem Informasi <br> <span class="text-primary">E-Skripsi ITBM</span>
                             </p>
                         </div>
-                        <div class="card-body">
+                        {{-- <hr class="m-0 mx-auto border-primary w-50"> --}}
+                        <div class="card-body" style="background-color: rgb(226,232,240)">
                             <h5 class="mb-3 text-center font-weight-bold text-dark">Selamat Datang</h5>
-                            <p class="mb-4 text-center text-muted">Silakan login untuk mengakses sistem</p>
+                            <p class="mb-4 text-center text-muted">Silakan Login Untuk Mengakses
+                                Sistem</p>
                             <form action="{{ route('login') }}" method="POST">
                                 @csrf
                                 <div class="mb-3 input-group">
                                     <input id="email" class="form-control form-control-lg" type="email"
                                         name="email" :value="old('email')" required autofocus autocomplete="username"
-                                        placeholder="johndoe@mail.com">
+                                        placeholder="user.itbm@mail.com">
                                     <div class="input-group-append">
                                         <div class="input-group-text">
                                             <span class="fas fa-envelope"></span>
@@ -62,7 +64,7 @@
             loop: true,
             autoplay: true,
             // path: 'animation/animationopen1.json'
-            path: '{{ asset('animation/animationopen1.json') }}'
+            path: '{{ asset('animation/animationopen2.json') }}'
         });
     </script>
 </x-guest-layout>
