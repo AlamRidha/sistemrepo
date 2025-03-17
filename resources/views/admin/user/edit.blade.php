@@ -1,3 +1,24 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const roleSelect = document.getElementById("role");
+        const levelInput = document.getElementById("level");
+
+        function updateLevel() {
+            if (roleSelect.value === "admin") {
+                levelInput.value = 1;
+            } else if (roleSelect.value === "mahasiswa") {
+                levelInput.value = 2;
+            } else {
+                levelInput.value = "";
+            }
+        }
+
+        roleSelect.addEventListener("change", updateLevel);
+
+        // Set default saat halaman dimuat
+        updateLevel();
+    });
+</script>
 <x-admin>
     @section('title', 'Edit User')
     <div class="card">
@@ -29,9 +50,9 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="level" class="form-label">Level:*</label>
-                            <input type="number" class="form-control" name="level" required
-                                value="{{ $user->level }}">
+                            <label for="level" class="form-label">Level</label>
+                            <input type="number" class=" form-control" name="level" id="level" required
+                                value="{{ $user->level }}" readonly>
                             <x-error field="level" />
                         </div>
                     </div>
@@ -57,8 +78,10 @@
                                 <option value="" selected disabled>selecte the role</option>
                                 @foreach ($roles as $role)
                                     <option value="{{ $role->name }}"
-                                        {{ $user->roles[0]['name'] === $role->name ? 'selected' : '' }}>
-                                        {{ $role->name }}</option>
+                                        {{ $user->roles->first()->name === $role->name ? 'selected' : '' }}>
+                                        {{ $role->name }}
+                                        {{-- {{ $user->roles[0]['name'] === $role->name ? 'selected' : '' }}>
+                                        {{ $role->name }}</option> --}}
                                 @endforeach
                             </select>
                             <x-error>role</x-error>

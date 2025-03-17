@@ -1,3 +1,6 @@
+
+
+
 <x-admin>
     @section('title', 'Create User')
     <div class="card">

@@ -68,7 +68,9 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        $user = User::where('id', decrypt($id))->first();
+        $user = User::with('roles')->where('id', decrypt($id))->first();
+
+        // $user = User::where('id', decrypt($id))->first();
         return view('admin.user.edit', compact('user'));
     }
 
