@@ -13,8 +13,8 @@
                                 Sistem Informasi <br> <span class="text-primary">E-Skripsi ITBM</span>
                             </p>
                         </div>
-                        {{-- <hr class="m-0 mx-auto border-primary w-50"> --}}
-                        <div class="card-body" style="background-color: rgb(226,232,240)">
+                        <hr class="m-0 mx-auto border-primary w-50">
+                        <div class="card-body rounded-bottom" style="background-color: rgb(226,232,240)">
                             <h5 class="mb-3 text-center font-weight-bold text-dark">Selamat Datang</h5>
                             <p class="mb-4 text-center text-muted">Silakan Login Untuk Mengakses
                                 Sistem</p>
