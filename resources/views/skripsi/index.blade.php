@@ -10,13 +10,13 @@
             <table class="table table-striped table-bordered" id="skripsiTable">
                 <thead class="thead-light">
                     <tr>
-                        <th>No</th>
-                        <th>Judul</th>
-                        <th>Penulis</th>
-                        <th>Prodi</th>
-                        <th>Tahun Terbit</th>
-                        <th>Abstrak</th>
-                        <th>File</th>
+                        <th class="text-center">No</th>
+                        <th class="text-center">Judul</th>
+                        <th class="text-center">Penulis</th>
+                        <th class="text-center">Prodi</th>
+                        <th class="text-center">Tahun Terbit</th>
+                        <th class="text-center">Abstrak</th>
+                        <th class="text-center">File</th>
                         @if ($roleAdmin)
                             <th>Aksi</th>
                         @endif
@@ -56,7 +56,13 @@
                 },
                 {
                     data: 'Abstrak',
-                    name: 'Abstrak'
+                    name: 'Abstrak',
+                    render: function(data, type, row) {
+                        if (type === 'display' && data && data.length > 100) {
+                            return data.substring(0, 30) + '...';
+                        }
+                        return data;
+                    }
                 },
                 {
                     data: 'File',
@@ -66,7 +72,6 @@
                 }
             ];
 
-            // Only add action column to columns array if user is admin
             @if ($roleAdmin)
                 columns.push({
                     data: 'action',
