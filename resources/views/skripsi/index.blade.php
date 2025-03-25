@@ -58,7 +58,7 @@
                     data: 'Abstrak',
                     name: 'Abstrak',
                     render: function(data, type, row) {
-                        if (type === 'display' && data && data.length > 100) {
+                        if (type === 'display' && data && data.length > 10) {
                             return data.substring(0, 30) + '...';
                         }
                         return data;
