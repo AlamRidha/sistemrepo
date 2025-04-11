@@ -5,7 +5,7 @@ git clone https://github.com/AlamRidha/sistemrepo.git
 -   Masuk ke folder
 
 ```php
-cd adminlte-laravel10
+cd namafolder
 ```
 
 -   Setelah instalasi harus update vendor folder, bisa mengupdate vendor folder menggunakan perintah ini
